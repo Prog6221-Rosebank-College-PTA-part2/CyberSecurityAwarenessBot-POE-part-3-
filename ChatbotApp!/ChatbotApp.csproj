@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Remove="MainForm.resx" />
+	  <EmbeddedResource Remove="QuizForm.resx" />
+	  <EmbeddedResource Remove="TaskForm.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="QuizForm.resx">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Include="TaskForm.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AdditionalFiles Include="MainForm.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Chatbot.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="DisplayAsciiLogo.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="MainForm.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="QuizForm.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="Response Engine.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	  <Compile Update="TaskForm.cs">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Compile>
+	</ItemGroup>
+
+</Project>
